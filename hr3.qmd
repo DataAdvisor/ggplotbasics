@@ -1,0 +1,60 @@
+---
+title: "Hour 3"
+---
+
+# Aesthetics
+
+## Objective:
+
+Explain how to customize the plot's appearance using aesthetics such as color, size, shape, and more, and provide examples of how to use different aesthetics to create more engaging plots.
+
+-   Aesthetics: Explain what aesthetics are and how they are used to customize the appearance of plots in ggplot2.
+
+```{r}
+# import ggplot2 library
+library(ggplot2)
+
+# create a basic scatter plot with color aesthetics
+ggplot(data = mtcars) +
+  geom_point(mapping = aes(x = wt, y = mpg, color = factor(cyl)))
+
+```
+
+-   Size and Shape: Explain how to use size and shape aesthetics to customize the appearance of points in a scatter plot.
+
+```{r}
+# create a scatter plot with size and shape aesthetics
+ggplot(data = mtcars) +
+  geom_point(mapping = aes(x = wt, y = mpg, size = hp, shape = factor(cyl)))
+
+```
+
+-   Grouping: Explain how to group points in a plot by a variable and how to use different aesthetics for different groups.
+
+```{r}
+# create a scatter plot grouped by a variable
+ggplot(data = mtcars) +
+  geom_point(mapping = aes(x = wt, y = mpg, color = factor(cyl), shape = factor(gear)))
+
+```
+
+-   Using Scale functions: Explain how to use scale functions to map aesthetics to specific values.
+
+```{r}
+# create a scatter plot using scale functions
+ggplot(data = mtcars) +
+  geom_point(mapping = aes(x = wt, y = mpg, size = hp, color = hp)) +
+  scale_size_continuous(range = c(3, 8)) +
+  scale_color_gradient(low = "blue", high = "red")
+
+```
+
+## Exercise:
+
+-   Use any dataset of your choice and create a scatter plot with at least two aesthetics.
+
+-   Try to group the points by a variable and use different aesthetics for different groups.
+
+-   Use a scale function to map an aesthetic to specific values.
+
+This exercise will give you hands-on experience with using aesthetics to customize the appearance of plots in ggplot2. It will also help you to understand how to group points by a variable and use different aesthetics for different groups and how to use scale functions to map aesthetics to specific values.

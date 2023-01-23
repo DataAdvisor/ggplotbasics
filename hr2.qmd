@@ -1,0 +1,66 @@
+---
+title: "Hour 2"
+---
+
+# Installation and Basic Plot
+
+## Objective:
+
+Walk through the process of installing ggplot2 and any related packages, and demonstrate how to create a basic plot using ggplot2, including how to load data, specify the plot type, and customize the plot's appearance.
+
+-   Installation: Explain how to install ggplot2 and any related packages.
+
+    ```{r}
+    # install ggplot2
+    # install.packages("ggplot2")
+
+    # install other related packages
+    # install.packages("tidyverse")
+
+    ```
+
+-   Data: Explain how to load data in R and how to use ggplot2's functions to create visualizations with that data.
+
+```{r}
+# load data
+data(mtcars)
+```
+
+```{r}
+mtcars
+```
+
+-   Basic Plot: Demonstrate how to create a basic plot using ggplot2, including how to load data, specify the plot type, and customize the plot's appearance.
+
+    ```{r}
+    # import ggplot2 library
+    library(ggplot2)
+
+    # create a basic scatter plot
+    ggplot(data = mtcars) +
+      geom_point(mapping = aes(x = wt, y = mpg))
+
+    ```
+
+-   Customizing the Plot: Explain how to customize the plot's appearance using options such as color, shape, and size.
+
+    ```{r}
+    # import ggplot2 library
+    library(ggplot2)
+
+    # create a scatter plot with red color and different shape
+
+    ggplot(data = mtcars) +
+      geom_point(mapping = aes(x = wt, y = mpg), color = "red", shape = 1)
+
+    ```
+
+    ## Exercise:
+
+-   Load any dataset of your choice and create a basic scatter plot using ggplot2.
+
+-   Try customizing the plot by changing the color, shape, or size of the points.
+
+-   Add a title and x-axis and y-axis labels to the plot.
+
+This exercise will give you hands-on experience with creating a basic plot using ggplot2 and customizing it. It will also help you to understand how to load data and how to use the basic ggplot2 functions to create visualizations.

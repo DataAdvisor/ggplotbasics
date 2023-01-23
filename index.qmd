@@ -1,0 +1,5 @@
+---
+title: "gpgplot tutorial"
+---
+
+### This tutorial is designed to provide a comprehensive introduction to the ggplot2 package in R. ggplot2 is a powerful data visualization tool that allows you to create elegant and informative plots with minimal code. This tutorial will cover the basics of creating plots with ggplot2, including how to create different types of plots, how to customize the appearance of plots, and how to use advanced features of ggplot2 to create more complex plots. It will also cover best practices for creating plots with ggplot2, including how to use appropriate scales, how to select appropriate geoms, and how to avoid overplotting. The tutorial will be delivered in 8 one-hour sessions, each session will be followed by an exercise to give the participants hands-on experience with creating plots using ggplot2.

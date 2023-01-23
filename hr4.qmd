@@ -1,0 +1,73 @@
+---
+title: "Hour 4"
+author: "Mr. Denniz"
+---
+
+# Layers
+
+## Objective:
+
+### Show how to add layers to a plot, such as points, lines, and text, and how to customize their appearance.
+
+-   Layers: Explain what layers are and how they are used to add different elements to a plot in ggplot2.
+
+```{r}
+# import ggplot2 library
+library(ggplot2)
+
+# create a basic scatter plot with a line
+ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+      
+
+
+
+```
+
+-   Text: Explain how to add text to a plot and how to use different text elements such as labels, titles, and subtitles.
+
+```{r}
+# create a scatter plot with text labels
+ggplot(data = mtcars, mapping = aes(x = wt, y = mpg, label = rownames(mtcars))) +
+  geom_point() +
+  geom_text(size = 3, hjust = 0, nudge_x = 0.05)
+
+```
+
+Statistical Transformations: Explain how to use statistical transformations to add elements such as error bars, box plots, and violin plots to a plot.
+
+```{r}
+# create a scatter plot with error bars
+ggplot(data = mtcars,mapping = aes(x = wt, y = mpg)) +
+  geom_point() +
+  geom_errorbar(mapping = aes(ymin = mpg - hp, ymax = mpg + hp))
+
+```
+
+-   Adding theme: Explain how to use ggplot2 theme elements to improve the appearance of the plot.
+
+```{r}
+# create a scatter plot with a theme
+ggplot(data = mtcars) +
+  geom_point(mapping = aes(x = wt, y = mpg)) +
+  theme_classic()
+
+```
+
+## Exercise:
+
+-   Use any dataset of your choice and create a scatter plot with at least one layer.
+
+-   Add text to the plot, such as labels, titles, and subtitles.
+
+-   Use a statistical transformation to add error bars, box plots, or violin plots to the plot.
+
+-   Add a theme to the plot to improve its appearance.
+
+This exercise will give you hands-on experience with adding layers to a plot in ggplot2 and customizing the appearance of those layers. It will also help you to understand how to use text and statistical transformations to add additional elements to a plot, and how to use themes to improve the overall appearance of the plot.
+
+```{r}
+mtcars
+
+```

@@ -1,0 +1,37 @@
+---
+title: "Hour 1"
+---
+
+# Introduction to ggplot2
+
+## Objectives:
+
+Provide an overview of ggplot2 and its features, explain why it is a popular choice for data visualization in R, and set expectations for the course.
+
+-   Introduction to ggplot2: Explain what ggplot2 is, its features and benefits, and why it is a popular choice for data visualization in R.
+
+-   ggplot2's Grammar of Graphics: Introduce the concept of the grammar of graphics, a general framework for creating statistical graphics, and explain how ggplot2 is built on top of this framework.
+
+-   Types of Plots: Provide examples of the different types of plots that can be created using ggplot2, such as scatter plots, line plots, bar charts, histograms, and more.
+
+-   Customization: Explain how ggplot2 allows for great flexibility in customizing plots, including adjusting the appearance of the plot, adding layers, and more.
+
+-   Importing data: Explain how to import data in R, and how to use ggplot2's functions to create visualizations with that data.
+
+```{r}
+# import ggplot2 library
+library(ggplot2)
+
+# create a basic scatter plot
+ggplot(data = mtcars) +
+  geom_point(mapping = aes(x = wt, y = mpg)) 
+ 
+```
+
+## Exercise:
+
+Import any dataset of your choice and create a basic scatter plot using ggplot2.
+
+Try customizing the plot by changing the color, shape, or size of the points.
+
+This exercise will help youto understand the basics of ggplot2 and how it is used to create plots. This will also give you chance to start experimenting with the package and getting a feel for how it works.

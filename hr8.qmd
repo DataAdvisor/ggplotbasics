@@ -1,0 +1,53 @@
+---
+title: "Hour 8"
+---
+
+# ggplot2 Best Practices
+
+## Objective: 
+
+Explain best practices for creating plots with ggplot2, such as using appropriate scales, selecting appropriate geoms, and avoiding overplotting.
+
+-   Scales: Explain how to use appropriate scales for the data and the purpose of the plot.
+
+    ```{r}
+    # import ggplot2 library
+    library(ggplot2)
+
+    # create a scatter plot with an appropriate scale
+    ggplot(data = mtcars) +
+      geom_point(mapping = aes(x = wt, y = mpg)) +
+      scale_x_log10()
+
+    ```
+
+-   Geoms: Explain how to select appropriate geoms for the data and the purpose of the plot.
+
+    ```{r}
+    # create a histogram with an appropriate geom
+    ggplot(data = mtcars) +
+      geom_histogram(mapping = aes(x = mpg))
+
+    ```
+
+-   Overplotting: Explain how to avoid overplotting by using transparency, jittering, and faceting.
+
+    ```{r}
+    # create a scatter plot with transparency to avoid overplotting
+    ggplot(data = mtcars) +
+      geom_point(mapping = aes(x = wt, y = mpg), alpha = 0.5)
+
+
+    ```
+
+    ## Exercise:
+
+    -   Use any dataset of your choice and create a scatter plot.
+
+    -   Use appropriate scales for the data and the purpose of the plot.
+
+    -   Select appropriate geoms for the data and the purpose of the plot.
+
+    -   Avoid overplotting by using transparency, jittering, and faceting.
+
+    This exercise will give you hands-on experience with creating plots using ggplot2 best practices, such as using appropriate scales, selecting appropriate geoms, and avoiding overplotting. It will also help you to understand how to use these best practices to create more effective and informative plots.

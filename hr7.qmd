@@ -1,0 +1,54 @@
+---
+title: "Hour7"
+---
+
+# Customizing Plots
+
+## Objective:
+
+Explain how to customize plots by using themes and scales, and provide examples of how to use these features to improve the appearance and readability of plots.
+
+-   Themes: Explain how to use themes to improve the appearance of plots by changing colors, fonts, and other elements.
+
+    ```{r}
+    # import ggplot2 library
+    library(ggplot2)
+
+    # create a scatter plot with a theme
+    ggplot(data = mtcars) +
+      geom_point(mapping = aes(x = wt, y = mpg)) +
+      theme_classic()
+
+    ```
+
+-   Scales: Explain how to use scales to customize the appearance of plots by changing colors, labels, and other elements.
+
+    ```{r}
+    # create a scatter plot with a customized scale
+    ggplot(data = mtcars) +
+      geom_point(mapping = aes(x = wt, y = mpg, color = hp)) +
+      scale_color_gradient(low = "blue", high = "red")
+
+    ```
+
+-   Labels: Explain how to use labels to customize the appearance of plots by adding labels, titles, and subtitles.
+
+    ```{r}
+    # create a scatter plot with labels
+    ggplot(data = mtcars) +
+      geom_point(mapping = aes(x = wt, y = mpg)) +
+      ggtitle("Scatter plot of wt and mpg") +
+      xlab("Weight") +
+      ylab("Miles per Gallon")
+
+    ```
+
+    ## Exercise:
+
+    -   Use any dataset of your choice and create a scatter plot.
+
+    -   Customize the appearance of the plot using themes and scales.
+
+    -   Add labels to the plot to improve its readability.
+
+    This exercise will give you hands-on experience with customizing plots in ggplot2 using themes, scales, and labels. It will also help you to understand how to use these features to improve the appearance and readability of plots.

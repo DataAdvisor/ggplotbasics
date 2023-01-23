@@ -1,0 +1,53 @@
+---
+title: "Hour 6"
+---
+
+# Advanced Features
+
+## Objective:
+
+Explain advanced features of ggplot2 such as using coordinate systems, adding annotations, and using statistical transformations to create more complex plots.
+
+-   Coordinate Systems: Explain how to use different coordinate systems, such as polar and map coordinates, to create more specialized plots.
+
+    ```{r}
+    # import ggplot2 library
+    library(ggplot2)
+
+    # create a scatter plot in polar coordinates
+    ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) +
+      geom_point() +
+      coord_polar()
+
+    ```
+
+-   Annotations: Explain how to add annotations, such as arrows and text, to a plot to provide additional information.
+
+    ```{r}
+    # create a scatter plot with annotations
+    ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) +
+      geom_point()+
+      annotate("text", x = 4, y = 30, label = "Outlier")
+      #annotate("arrow", x = 4, y = 30, xend = 4.5, yend = 25)
+
+    ```
+
+-   Statistical Transformations: Explain how to use statistical transformations to create more complex plots, such as heatmaps and 3D plots.
+
+    ```{r}
+    # create a heatmap
+    ggplot(data = mtcars) +
+      geom_tile(mapping = aes(x = wt, y = hp, fill = mpg)) +
+      scale_fill_gradient(low = "white", high = "red")
+
+    ```
+
+    ## Exercise:
+
+    -   Use any dataset of your choice and create a plot using a different coordinate system.
+
+    -   Add annotations to the plot to provide additional information.
+
+    -   Use a statistical transformation to create a more complex plot, such as a heatmap or 3D plot.
+
+    This exercise will give participants hands-on experience with using advanced features of ggplot2 such as using different coordinate systems, adding annotations, and using statistical transformations to create more complex plots. It will also help them to understand how to use these features to create more informative and engaging plots.
